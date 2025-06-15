@@ -136,16 +136,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = "static/"
-# STATIC_ROOT = BASE_DIR / "staticfiles" # Uncomment and use for production collectstatic
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+print("DEBUG: BASE_DIR =", BASE_DIR, type(BASE_DIR))
+print("DEBUG: STATIC_ROOT =", STATIC_ROOT, type(STATIC_ROOT))
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# Media files configuration (for uploaded images)
-MEDIA_URL = "/media/"  # The URL prefix for media files (e.g., http://localhost:8000/media/my_service_image.jpg)
-# MEDIA_ROOT now correctly points to the 'media' folder inside the JoseCarCareBackend directory
+
+MEDIA_URL = "/media/"  
 MEDIA_ROOT = BASE_DIR / "JoseCarCareBackend" / "media"
 
 
