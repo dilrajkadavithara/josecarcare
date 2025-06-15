@@ -7,8 +7,8 @@ from django.conf.urls.static import static  # <-- NEW: Import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/", include("services.urls")),  # <-- NEW: Add this line for your API!
-    # You might add other top-level URLs here later
+    path("api/", include("services.urls")),
+    
 ]
 
 

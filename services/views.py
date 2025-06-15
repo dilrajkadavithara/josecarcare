@@ -30,3 +30,4 @@ class InquiryViewSet(viewsets.ModelViewSet):
     serializer_class = InquirySerializer
     # For security, you might later add permissions here to restrict who can view/edit inquiries.
     # For now, we'll allow creation without authentication.
+
