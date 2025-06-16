@@ -63,7 +63,10 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Our React development server's address
+    "http://localhost:3000",          # React dev server (optional, for development)
+    "http://159.65.155.90",           # Your server IP (HTTP)
+    "https://159.65.155.90",          # Your server IP (HTTPS)
+    "http://127.0.0.1:8000",          # Django backend (optional, internal requests)
 ]
 
 ROOT_URLCONF = "JoseCarCareBackend.urls" # This might need to be "urls" if this is the top-level urls.py of the project
@@ -138,8 +141,8 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-print("DEBUG: BASE_DIR =", BASE_DIR, type(BASE_DIR))
-print("DEBUG: STATIC_ROOT =", STATIC_ROOT, type(STATIC_ROOT))
+
+
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
