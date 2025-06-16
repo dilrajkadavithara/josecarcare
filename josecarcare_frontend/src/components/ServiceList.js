@@ -12,7 +12,7 @@ function ServiceList() {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const apiUrl = 'http://127.0.0.1:8000/api/services/';
+        const apiUrl = 'http://159.65.155.90/api/services/';
         const response = await fetch(apiUrl);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
